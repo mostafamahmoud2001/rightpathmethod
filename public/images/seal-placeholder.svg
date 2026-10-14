@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- PLACEHOLDER SEAL. Not final artwork. Replace with the client's approved badge files. -->
+  <defs>
+    <path id="ring" d="M100 100 m-72 0 a72 72 0 1 1 144 0 a72 72 0 1 1 -144 0"/>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#14284b"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#c9a227" stroke-width="3"/>
+  <circle cx="100" cy="100" r="56" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+  <text font-family="Georgia, serif" font-size="13" font-weight="700" letter-spacing="3" fill="#ffffff">
+    <textPath href="#ring" startOffset="2%">RIGHTPATH™ CERTIFIED · PLACEHOLDER SEAL ·</textPath>
+  </text>
+  <path d="M70 120 L95 95 L130 95" fill="none" stroke="#c9a227" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="70" cy="120" r="6" fill="#ffffff"/>
+  <circle cx="130" cy="95" r="6" fill="#c9a227"/>
+</svg>

@@ -1,0 +1,75 @@
+<!-- meta {
+  "nav": "contact",
+  "title": "Contact | Certification, Licensing, and Institutional Inquiries",
+  "description": "Contact the RightPath™ Institute certification office for certification questions, institutional review requests, mark usage questions, or partnership inquiries.",
+  "scripts": ["forms.js"]
+} -->
+<section class="hero" aria-labelledby="page-title">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">RightPath™ Institute</p>
+      <h1 id="page-title">Contact</h1>
+      <p class="hero-subtitle">Certification, Licensing, and Institutional Inquiries</p>
+    </div>
+    <figure class="hero-media">
+      <!-- Hero Visual Direction: Professional contact office, certification seal, formal correspondence, campus building, and clean institutional support visual. -->
+      <img src="images/hero-placeholder.svg" width="640" height="420" alt="Placeholder image. Visual direction: professional contact office, certification seal, formal correspondence, campus building, and clean institutional support visual.">
+      <figcaption><span class="ph-badge">Image placeholder</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <p class="lead">For certification questions, institutional review requests, mark usage questions, or partnership inquiries, contact the RightPath™ Institute certification office.</p>
+      <h2>Certification Office</h2>
+      {{render:contactTable}}
+    </div>
+    <div>
+      <h2 id="contact-form">Send an Inquiry</h2>
+      <form id="contact-form-el" class="form" data-form="contact" novalidate>
+        <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+        <div class="field">
+          <label for="c-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="c-name" name="name" type="text" required autocomplete="name">
+          <p class="field-error" id="c-name-error"></p>
+        </div>
+        <div class="field">
+          <label for="c-org">Organization</label>
+          <input id="c-org" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="c-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="c-email" name="email" type="email" required autocomplete="email">
+          <p class="field-error" id="c-email-error"></p>
+        </div>
+        <div class="field">
+          <label for="c-type">Inquiry type <span class="req" aria-hidden="true">*</span></label>
+          <select id="c-type" name="inquiryType" required>
+            <option value="">Select an inquiry type</option>
+            <option>Apply for certification</option>
+            <option>Request institutional review</option>
+            <option>Ask about mark licensing</option>
+            <option>Report suspected mark misuse</option>
+            <option>Request media information</option>
+            <option>Discuss research or standards participation</option>
+          </select>
+          <p class="field-error" id="c-type-error"></p>
+        </div>
+        <div class="field">
+          <label for="c-message">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="c-message" name="message" required></textarea>
+          <p class="field-error" id="c-message-error"></p>
+        </div>
+        <div class="field">
+          <label for="c-file">Optional supporting material</label>
+          <input id="c-file" name="attachment" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg" aria-describedby="c-file-hint">
+          <p class="hint" id="c-file-hint">PDF, Word, PowerPoint, or image. Maximum 10 MB.</p>
+          <p class="field-error" id="c-file-error"></p>
+        </div>
+        <p><button class="button" type="submit">Send Inquiry</button></p>
+      </form>
+    </div>
+  </div>
+</section>

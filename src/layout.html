@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page.title}}</title>
+  <meta name="description" content="{{page.description}}">
+  <link rel="canonical" href="{{page.url}}">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#14284b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RightPath™">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:description" content="{{page.description}}">
+  <meta property="og:url" content="{{page.url}}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/site.js" defer></script>
+  {{page.scripts}}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="draft-bar" role="note">
+    <div class="container">Draft website. Items labelled <span class="ph-badge">Placeholder</span> will be replaced with final information.</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="index.html" aria-label="RightPath home">RightPath<span class="tm">™</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+    </div>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <div class="container">
+        <ul>
+{{render:navPrimary}}
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+{{page.content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-wordmark">RightPath<span class="tm">™</span></p>
+        <p class="footer-tagline">RightPath™ is Learning Done Right!™</p>
+      </div>
+      <nav aria-label="Secondary">
+        <ul class="footer-links">
+{{render:navSecondary}}
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>Certification for learning-design quality, not accreditation replacement.</p>
+      <p>© {{page.year}} RightPath™ Institute. RightPath™, RightPath Method™, Foundational Reinforcement™, RightPath Reviewed™, RightPath Aligned™, RightPath Certified™, RightPath Certified with Distinction™, and Learning Done Right!™ are trademarks of their owner.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!-- meta {
+  "nav": "directory",
+  "title": "Directory | Certified Programs and Institutions",
+  "description": "The RightPath™ Directory is a public registry of certified programs, institutions, and training providers.",
+  "scripts": ["directory.js"]
+} -->
+<section class="hero" aria-labelledby="page-title">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">RightPath™ Institute</p>
+      <h1 id="page-title">Directory</h1>
+      <p class="hero-subtitle">Certified Programs and Institutions</p>
+    </div>
+    <figure class="hero-media">
+      <!-- Hero Visual Direction: Large digital directory interface with certified program listings, filters, global map, institutional buildings, verification seal, and public registry theme. -->
+      <img src="images/hero-placeholder.svg" width="640" height="420" alt="Placeholder image. Visual direction: large digital directory interface with certified program listings, filters, global map, institutional buildings, verification seal, and public registry theme.">
+      <figcaption><span class="ph-badge">Image placeholder</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="lead prose">The RightPath™ Directory is a public registry of certified programs, institutions, and training providers. The directory allows learners, employers, partners, and institutions to verify whether a program currently holds an active RightPath™ certification.</p>
+
+    <!--
+      TODO(access): The source copy says "6-digit code access required". This screen is a UI MOCK ONLY.
+      A static site cannot enforce access: any 6 digits are accepted and the registry JSON is publicly
+      downloadable at data/directory.json. Real enforcement needs a server-side check (or a hosted auth
+      provider) before data is returned. Also open with the client: should the directory be public?
+    -->
+    <div id="directory-gate" class="gate" hidden>
+      <h2 id="gate-title" style="margin-top:0">Enter Access Code</h2>
+      <p>A 6-digit code is required to access the directory.</p>
+      <form id="gate-form" novalidate>
+        <div class="field">
+          <label for="access-code">6-digit access code</label>
+          <input class="code-input" id="access-code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" aria-describedby="access-code-error">
+          <p class="field-error" id="access-code-error" aria-live="polite"></p>
+        </div>
+        <p><button class="button" type="submit">Continue</button></p>
+      </form>
+      <p class="mock-note"><strong>Draft preview:</strong> this code screen is a design mock. Codes are not checked yet; any 6 digits will open the directory.</p>
+    </div>
+
+    <div id="directory-app">
+      <h2>Directory Search</h2>
+      <p>Search by institution, program name, subject area, certification level, location, delivery format, or renewal status.</p>
+
+      <form id="directory-filters" class="filters" role="search" aria-label="Search the directory">
+        <div class="field full">
+          <label for="directory-search">Search</label>
+          <input id="directory-search" name="q" type="text" placeholder="Institution, program, or verification number">
+        </div>
+        <div class="field"><label for="f-institution">Institution</label><select id="f-institution" name="institution"><option value="">All</option></select></div>
+        <div class="field"><label for="f-program">Program</label><select id="f-program" name="program"><option value="">All</option></select></div>
+        <div class="field"><label for="f-subject">Subject area</label><select id="f-subject" name="subjectArea"><option value="">All</option></select></div>
+        <div class="field"><label for="f-level">Certification level</label><select id="f-level" name="level"><option value="">All</option></select></div>
+        <div class="field"><label for="f-location">Location</label><select id="f-location" name="location"><option value="">All</option></select></div>
+        <div class="field"><label for="f-format">Delivery format</label><select id="f-format" name="deliveryFormat"><option value="">All</option></select></div>
+        <div class="field"><label for="f-status">Renewal status</label><select id="f-status" name="status"><option value="">All</option></select></div>
+        <div class="actions"><button class="button button-secondary" type="reset">Clear filters</button></div>
+      </form>
+
+      <h2>Directory Listings <span class="ph-badge">Sample data</span></h2>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="table-wrap" role="region" aria-label="Directory listings" tabindex="0">
+        <table class="table-stack">
+          <thead><tr><th scope="col">Institution</th><th scope="col">Program</th><th scope="col">Certification Level</th><th scope="col">Status</th><th scope="col">Renewal Date</th><th scope="col"><span class="visually-hidden">Details</span></th></tr></thead>
+          <tbody id="directory-results">
+            <tr><td colspan="6">Loading directory…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container two-col">
+    <div>
+      <h2>Registry Details</h2>
+      <p>Each listing’s detail view shows:</p>
+      <ul class="check-list">
+        <li>Certification scope and approved materials</li>
+        <li>Certification level and date awarded</li>
+        <li>Renewal date and current status</li>
+        <li>Provider website and program link</li>
+        <li>RightPath™ verification number</li>
+        <li>Notes on material changes or review limitations</li>
+      </ul>
+    </div>
+    <div>
+      <div class="callout">
+        <p class="callout-title">Sample Verification Number {{badge}}</p>
+        <p>{{ph.sampleVerificationNumber}}. Replace with final registry-number format.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <a class="button button-gold" href="#directory-search" data-focus-search>Search the Certified Directory</a>
+  </div>
+</section>
+
+<dialog class="detail" id="detail-dialog" aria-labelledby="detail-title">
+  <div class="detail-head">
+    <div>
+      <h2 id="detail-title"></h2>
+      <p id="detail-subtitle"></p>
+    </div>
+    <button class="detail-close" type="button" data-close aria-label="Close details">×</button>
+  </div>
+  <div class="detail-body" id="detail-body"></div>
+</dialog>

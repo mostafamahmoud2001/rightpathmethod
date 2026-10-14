@@ -1,0 +1,72 @@
+{
+  "_readme": "Every placeholder fact on the site lives here. Values come from RightPath_Website_Tab_Content_Final.docx and are marked 'Placeholder' in the UI. Replace with final organizational data, then run `npm run build`.",
+
+  "contact": {
+    "email": "certification@rightpath.com",
+    "phone": "(555) 010-2026",
+    "mailingAddress": "RightPath™ Institute, 100 Learning Standards Way, Suite 400, Arlington, VA 22201",
+    "officeHours": "Monday-Friday, 9:00 AM-5:00 PM Eastern",
+    "responseWindow": "Two business days"
+  },
+
+  "scoring": {
+    "categories": [
+      { "category": "Instructional Clarity", "weight": "20%", "score": "18/20" },
+      { "category": "Reinforcement Design", "weight": "15%", "score": "13/15" },
+      { "category": "Assessment Quality", "weight": "20%", "score": "16/20" },
+      { "category": "Feedback and Explanation", "weight": "15%", "score": "14/15" },
+      { "category": "Cognitive Load Reduction", "weight": "15%", "score": "12/15" },
+      { "category": "Learner Progression and Accessibility", "weight": "15%", "score": "13/15" }
+    ],
+    "exampleTotal": "86/100",
+    "exampleStatus": "RightPath Certified™"
+  },
+
+  "fees": [
+    { "reviewType": "Single Course Review", "fee": "$1,250", "notes": "Replace with final pricing." },
+    { "reviewType": "Program Review", "fee": "$4,800", "notes": "Replace with final pricing." },
+    { "reviewType": "Question Bank Review", "fee": "$2,500", "notes": "Replace with final pricing." },
+    { "reviewType": "Annual Mark License", "fee": "$1,000-$7,500", "notes": "Tiered by scope." },
+    { "reviewType": "Renewal Review", "fee": "$750-$3,500", "notes": "Based on material changes." }
+  ],
+
+  "certificationTerm": "one year from the date of approval, with annual renewal",
+
+  "sampleVerificationNumber": "RP-2026-0147",
+
+  "applyExamples": {
+    "institutionName": "Example: Summit Training Center",
+    "primaryContact": "Example: Jordan Avery, Director of Learning Quality",
+    "email": "certification@example.edu",
+    "programName": "Example: Project Management Exam Prep",
+    "deliveryFormat": "Online, hybrid, classroom, or self-paced",
+    "learnerAudience": "Adult professional learners preparing for credentialing",
+    "requestedLevel": "RightPath Certified™",
+    "requestedScope": "Full program, question bank, and learner explanations",
+    "reviewWindow": "August 2026",
+    "referenceCode": "STC-PM-2026-01"
+  },
+
+  "directory": {
+    "_note": "Sample registry data. Fields marked in _placeholderFields were not in the source and are invented for the draft.",
+    "records": [
+      {
+        "id": "RP-2026-0147",
+        "institution": "Northbridge College",
+        "program": "Business Management Certificate",
+        "subjectArea": "Business",
+        "level": "RightPath Certified™",
+        "status": "Active",
+        "renewalDate": "June 30, 2027",
+        "dateAwarded": "June 30, 2026",
+        "location": "Placeholder location",
+        "deliveryFormat": "Online",
+        "scope": "Full certificate program, including lessons, question bank, and learner explanations.",
+        "website": "https://example.edu",
+        "programLink": "https://example.edu/business-management-certificate",
+        "notes": "Sample registry entry. Replace with final registry data.",
+        "_placeholderFields": ["subjectArea", "dateAwarded", "location", "deliveryFormat", "scope", "website", "programLink", "notes"]
+      }
+    ]
+  }
+}

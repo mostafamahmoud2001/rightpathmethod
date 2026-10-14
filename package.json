@@ -1,0 +1,16 @@
+{
+  "name": "rightpathmethod-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "First-draft static website for rightpathmethod.com",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node serve.mjs",
+    "dev": "node serve.mjs",
+    "whitepaper": "node tools/make-whitepaper-pdf.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
