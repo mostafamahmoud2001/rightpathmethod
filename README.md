@@ -22,6 +22,7 @@ npm run build
 
 Upload the contents of `dist/` to any static host:
 
+- **GitHub Pages (set up):** `.github/workflows/deploy.yml` builds and publishes on every push to `main`. One-time step: repo **Settings → Pages → Source: GitHub Actions**. Live at https://mostafamahmoud2001.github.io/rightpathmethod/.
 - **Netlify / Cloudflare Pages / Vercel:** build command `npm run build`, publish directory `dist`.
 - **GitHub Pages / S3 / cPanel:** run the build locally and upload `dist/`.
 
